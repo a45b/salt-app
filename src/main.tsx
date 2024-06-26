@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { SaltProvider } from "@salt-ds/core";
 import "@salt-ds/theme/index.css";
 import App from './App.tsx'
-import './index.css'
+import './index.scss'
 
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

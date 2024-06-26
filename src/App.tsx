@@ -1,12 +1,11 @@
-import { ListBox, StackLayout, Option, Text } from '@salt-ds/core';
-import './App.css'
+import { ListBox, StackLayout, Option, Text, Spinner } from '@salt-ds/core';
+import './App.scss'
 
 function App() {
   return (
     <>
       <div className='app-container'>
-          <div className='side-bar'>
-
+        <div className='side-bar'>
           <ListBox className='meeting-list' style={{ width: "300px" }} onSelectionChange={(e, v) => {
             console.log(e, v)
           }}>
@@ -41,11 +40,16 @@ function App() {
               </StackLayout>
             </Option>
           </ListBox>
-    
-          </div>
-          <main className='main-content'>
-            
-          </main>
+        </div>
+
+        <main className='main-content'>
+          <StackLayout gap={2} align="center">
+            <Spinner />
+            <Text aria-atomic="true" aria-live="polite">
+              Loading...
+            </Text>
+          </StackLayout>
+        </main>
       </div>
     </>
   )
