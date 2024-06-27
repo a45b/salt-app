@@ -1,10 +1,18 @@
-import { ListBox, StackLayout, Option, Text, Spinner } from '@salt-ds/core';
+import { ListBox, StackLayout, Option, Text, Spinner, FlexLayout, NavigationItem } from '@salt-ds/core';
 import './App.scss'
 
 function App() {
   return (
     <>
       <div className='app-container'>
+        <nav>
+          <FlexLayout justify='space-between' gap={3}>
+            <h1 className='logo'>Meeting Assist</h1>
+            <NavigationItem>
+
+            </NavigationItem>
+          </FlexLayout>
+        </nav>
         <div className='side-bar'>
           <ListBox className='meeting-list' style={{ width: "300px" }} onSelectionChange={(e, v) => {
             console.log(e, v)
